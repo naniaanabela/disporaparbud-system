@@ -30,10 +30,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <body>
     <div class="container-scroller">
       <?php $this->load->view('template_parts/navbar'); ?>
-
       <div class="container-fluid page-body-wrapper">
         <?php $this->load->view('template_parts/sidebar'); ?>
-
         <!-- partial -->
         <input type="hidden" id="dataPieChart" value="<?php echo $hasil_clustering_persentase; ?>" />
         <div class="main-panel">
@@ -44,7 +42,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   <div class="card-body">
                     <h1 class="card-title" style="font-size: 24px; margin-bottom: 5px;"><?php echo ($this->session->has_userdata('title') ? $this->session->userdata('title') : 'Title'); ?></h1>
                     <p class="card-description text-muted"><?php echo ($this->session->has_userdata('subtitle') ? $this->session->userdata('subtitle') : 'Sub Title'); ?></p>
-
                     <div class="pc-tab">
                       <input checked="checked" id="tab1" type="radio" name="pct" />
                       <input id="tab2" type="radio" name="pct" />
@@ -67,7 +64,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                           <figure class="highcharts-figure">
                             <div id="container"></div>
                           </figure>
-                          
+
                           <div class="col-md-12">
                           <div class="row">
                             <?php $i = 1 ?>
@@ -108,9 +105,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <?php } ?>
                           </div></div>
                           
+
                           <br></br>
-                          
-                          <table class="table table-striped" id="hasilClustering">
+                          <table class="table table-striped" id = hasilClustering>
                             <thead>
                               <tr>
                                 <th>Tahun</th>
@@ -138,32 +135,36 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <div class="col-lg-3 col-md-6">
                                       <div class="d-flex">
                                         <div class="wrapper">
-                                          <h5 class="mb-2 font-weight-medium text-primary">Tahun</h5>
                                           <h3 class="mb-0 font-weight-semibold"><?php echo $perhitungan->tahun; ?></h3>
+                                          <h5 class="mb-2 font-weight-medium text-primary">Tahun</h5>
+                                          <!-- <p class="mb-0 text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> -->
                                         </div>
                                       </div>
                                     </div>
                                     <div class="col-lg-3 col-md-6 mt-md-0 mt-4">
                                       <div class="d-flex">
-                                        <div class="wrapper">                                          
-                                          <h5 class="mb-2 font-weight-medium text-primary">Learning Rate</h5>
+                                        <div class="wrapper">
                                           <h3 class="mb-0 font-weight-semibold"><?php echo $perhitungan->learning_rate; ?></h3>
+                                          <h5 class="mb-2 font-weight-medium text-primary">Learning Rate</h5>
+                                          <!-- <p class="mb-0 text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> -->
                                         </div>
                                       </div>
                                     </div>
                                     <div class="col-lg-3 col-md-6 mt-md-0 mt-4">
                                       <div class="d-flex">
                                         <div class="wrapper">
-                                          <h5 class="mb-2 font-weight-medium text-primary">Jumlah Cluster</h5>
                                           <h3 class="mb-0 font-weight-semibold"><?php echo $perhitungan->jumlah_cluster; ?></h3>
+                                          <h5 class="mb-2 font-weight-medium text-primary">Jumlah Cluster</h5>
+                                          <!-- <p class="mb-0 text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> -->
                                         </div>
                                       </div>
                                     </div>
                                     <div class="col-lg-3 col-md-6 mt-md-0 mt-4">
                                       <div class="d-flex">
                                         <div class="wrapper">
-                                          <h5 class="mb-2 font-weight-medium text-primary">Jumlah Iterasi</h5>
                                           <h3 class="mb-0 font-weight-semibold"><?php echo $perhitungan->jumlah_iterasi; ?></h3>
+                                          <h5 class="mb-2 font-weight-medium text-primary">Jumlah Iterasi</h5>
+                                          <!-- <p class="mb-0 text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> -->
                                         </div>
                                       </div>
                                     </div>
@@ -171,7 +172,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </div>
                               </div>
                             </div>
-
                             <div class="col-md-12 grid-margin">
                               <div class="card">
                                 <div class="card-body">
@@ -214,7 +214,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </div>
                               </div>
                             </div>
-
                             <div class="col-md-12 grid-margin">
                               <div class="card">
                                 <div class="card-body">
@@ -248,12 +247,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </div>
                               </div>
                             </div>
-
                             <?php foreach($detail_perhitungan as $row) { ?>
                             <div class="col-md-12 grid-margin">
                               <hr>
                             </div>
-
                             <div class="col-md-12 grid-margin">
                               <div class="card">
                                 <div class="card-body">
@@ -287,7 +284,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </div>
                               </div>
                             </div>
-
                             <div class="col-md-12 grid-margin">
                               <div class="card">
                                 <div class="card-body">
@@ -319,7 +315,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </div>
                               </div>
                             </div>
-
                             <div class="col-md-12 grid-margin">
                               <div class="card">
                                 <div class="card-body">
@@ -362,7 +357,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </div>
                               </div>
                             </div>
-
                             <div class="col-md-12 grid-margin">
                               <div class="card">
                                 <div class="card-body">
@@ -390,7 +384,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </div>
                               </div>
                             </div>
-
                             <div class="col-12 grid-margin stretch-card">
                               <div class="card">
                                 <div class="card-body">
@@ -411,7 +404,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="tab3">
                           
                           <div class="col-md-12 grid-margin">
-                          <H5> Hasil Rekomendasi Cluster untuk Prioritas Pengembangan Wisata Adalah : <H5>
                             <div class="card">
                               <div class="card-body">
                                 <table id="rekomendasi" class="table table-striped">
@@ -454,6 +446,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                               </div>
                             </div>
                           </div>
+      
+
                         </div>
                       </section>
                     </div> 
@@ -481,12 +475,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <script src="<?php echo base_url(); ?>themes/assets/js/shared/off-canvas.js"></script>
     <script src="<?php echo base_url(); ?>themes/assets/js/shared/misc.js"></script>
     <!-- endinject -->
-
     <script src="<?php echo base_url(); ?>themes/assets/js/highcharts.js"></script>
     <script src="<?php echo base_url(); ?>themes/assets/js/exporting.js"></script>
     <script src="<?php echo base_url(); ?>themes/assets/js/export-data.js"></script>
     <script src="<?php echo base_url(); ?>themes/assets/js/accessibility.js"></script>
-
     <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.7.1/js/dataTables.buttons.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.print.min.js"></script>
@@ -495,17 +487,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         var _arr = JSON.parse($('#dataPieChart').val());
         var _data = [];
         var _i = 1;
-
         $.each($(_arr), function(key, value) {
           if(_i === 1) {
             _data.push({name: 'Cluster ' + _i, y: value, sliced: true, selected: true});
           } else {
             _data.push({name: 'Cluster ' + _i, y: value});
           }
-
           _i++;
         });
-
         // Build the chart
         Highcharts.chart('container', {
           chart: {
@@ -540,13 +529,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             data: _data
           }]
         });
-
         var table = $("#rekomendasi").DataTable({
           dom: "<'row'<'col-sm-4'l><'col-sm-4 toolbar'><'col-sm-4'f>>" +
             "<'row'<'col-sm-12'tr>>" +
             "<'row'<'col-sm-5'i><'col-sm-7'p>>",
         });
-        var table2 = $("#hasilClustering").DataTable({
+
+        var table = $("#hasilClustering").DataTable({
           dom: "<'row'<'col-sm-4'l><'col-sm-4 text-center'B><'col-sm-4'f>>" +
             "<'row'<'col-sm-12'tr>>" +
             "<'row'<'col-sm-5'i><'col-sm-7'p>>",
@@ -557,12 +546,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               }
             ],
         });
+
+
         var txt_cluster = '';
         for (let index = 1; index <= <?= $jumlah_clustering ?>; index++) {
           txt_cluster += '<option value="Cluster '+index+'">Cluster '+index+'</option>'
         }
         $("div.toolbar").html(`<select class="filter form-control" id="filter-cluster">
           <option value="">Semua Cluster</option>
+          <option value="Cluster 1">Cluster 1</option>
+          <option value="Cluster 2">Cluster 2</option>
+          <option value="Cluster 3">Cluster 3</option>
           `+txt_cluster+`
         </select>`);
         $("#filter-cluster").on('change',function(){
@@ -574,5 +568,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         })
       })
     </script>
+    
   </body>
 </html>
